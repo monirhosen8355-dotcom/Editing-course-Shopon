@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment</title>
+
+<link rel="stylesheet" href="payment.css">
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="amount">
+<h2>BDT 99</h2>
+<p>কম বা বেশি Send Money করবেন না</p>
+</div>
+
+<div class="pay-service">
+<span class="pay">PAY</span>
+SERVICE
+</div>
+
+</div>
+
+<div class="container">
+
+<p class="warning">
+আপনি যদি টাকার পরিমাণ পরিবর্তন করেন (BDT 99.00), আপনি ক্রেডিট পেতে সক্ষম হবেন না।
+</p>
+
+<div class="grid">
+
+<div class="left">
+
+<label>Wallet No*</label>
+<p class="small">এই BKASH নাম্বারে শুধুমাত্র Send Money গ্রহণ করা হয়</p>
+
+<div class="wallet-box">
+
+<input id="walletNumber" type="text" value="01897889723" readonly>
+
+<button class="copy-btn" onclick="copyNumber()">📋</button>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<label>Wallet Provider</label>
+
+<div class="bkash">
+BKASH Deposit
+</div>
+
+</div>
+
+</div>
+
+<div class="trx">
+
+<label>
+Send Money TrxID নাম্বারটি লিখুন <span>(প্রয়োজন)</span>
+</label>
+
+<input id="trxid" type="text" maxlength="10" placeholder="TrxID অবশ্যই পূরণ করতে হবে!"></div>
+
+<button class="confirm" onclick="sendWhatsApp()">
+নিশ্চিত
+</button>
+
+<div class="notice">
+
+<p class="title">সতর্কতা:</p>
+
+<p class="text">
+লেনদেন আইডি সঠিকভাবে পূরণ করতে হবে, অন্যথায় ক্রেডিট ব্যর্থ হবে।
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function copyNumber(){
+
+const copyText = document.getElementById("walletNumber");
+
+copyText.select();
+
+copyText.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(copyText.value);
+
+alert("Number Copied");
+
+}
+
+</script>
+<script>
+
+function sendWhatsApp(){
+
+let trx = document.getElementById("trxid").value;
+
+if(trx === ""){
+alert("দয়া করে TrxID লিখুন");
+return;
+}
+
+if(trx.length > 10){
+alert("TrxID ১০ অক্ষরের বেশি হতে পারবে না");
+return;
+}
+
+let number = "8801874491006";
+
+let message = "আমি ভিডিও এডিটিং কোর্সের জন্য পেমেন্ট করেছি.%0ATrxID: " + trx;
+
+let url = "https://wa.me/" + number + "?text=" + message;
+
+window.open(url, "_blank");
+
+}
+
+</script>
+</body>
+</html>
