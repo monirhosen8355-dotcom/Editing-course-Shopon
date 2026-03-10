@@ -1,82 +1,64 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
 font-family:sans-serif;
 background:#d8c5a6;
+margin:0;
+padding:0;
 }
 
-/* HERO SECTION */
 
 .hero{
-
-height:720px;
-
-background-image:url("ChatGPT\ Image\ Mar\ 10\,\ 2026\,\ 05_24_57\ PM.png");
-
+min-height:720px;
+background-image:url("ChatGPT Image Mar 10, 2026, 05_24_57 PM.png");
 background-size:cover;
 background-position:center;
-
 display:flex;
 flex-direction:column;
 align-items:center;
-
 text-align:center;
-
-padding-top:40px;
-
+padding:0px;
+margin: -40px;
 }
-
-/* LOGO */
 
 .logo img{
-
 width:90px;
 height:90px;
-
 border-radius:50%;
-
 margin-bottom:15px;
-
 }
-
-/* BANNER */
 
 .banner img{
-
-width:720px;
-max-width:90%;
-
+width:100%;
+max-width:720px;
 margin-bottom:20px;
-
 }
-
-/* OFFER TEXT */
 
 .offer{
-
 font-size:42px;
-
 color:#ffffff;
-
 font-weight:bold;
-
 text-shadow:2px 2px 10px rgba(0,0,0,0.8);
-
 margin-bottom:25px;
-
 }
-
-/* FEATURE BOX */
 
 .features{
 display:flex;
 justify-content:center;
 gap:25px;
 margin-top:20px;
+flex-wrap:wrap;
 }
 
 .box{
@@ -89,9 +71,8 @@ position:relative;
 box-shadow:0 5px 10px rgba(0,0,0,0.4);
 text-decoration:none;
 color:black;
+cursor:pointer;
 }
-
-/* arrow effect */
 
 .box::after{
 content:"";
@@ -114,7 +95,6 @@ font-size:26px;
 border-radius:60px;
 box-shadow:0 12px 0 #7a0000;
 cursor:pointer;
-
 transition:0.2s;
 }
 
@@ -127,69 +107,49 @@ box-shadow:0 16px 0 #7a0000;
 transform:translateY(6px);
 box-shadow:0 4px 0 #7a0000;
 }
+
 .gift{
-
 background:#e5d0ad;
-
 padding:60px 20px;
-
 text-align:center;
-
+margin: -20px;
 }
 
 .gift h2{
-
 color:#0c4b2e;
-
 font-size:28px;
-
-margin-bottom:30px;
-
+margin-bottom:45px;
 }
 
 .gift-box{
-
 max-width:600px;
-
 margin:auto;
-
 background:#e8d7b9;
-
 padding:20px 25px;
-
 border-radius:12px;
-
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
-
 }
 
 .gift-box ul{
-
 list-style:none;
-
 text-align:left;
-
 }
 
 .gift-box li{
-
 padding:12px 5px;
-
 border-bottom:1px solid #b9a98c;
-
 font-size:17px;
-
 }
 
 .gift-box li:last-child{
-
 border-bottom:none;
-
 }
+
 .faq{
 background:#f4f4f4;
 padding:70px 20px;
 text-align:center;
+margin: -40px;
 }
 
 .faq h2{
@@ -225,11 +185,6 @@ cursor:pointer;
 background:#f9f9f9;
 }
 
-.faq-question span{
-font-size:22px;
-color:#666;
-}
-
 .faq-answer{
 display:none;
 padding:18px;
@@ -252,76 +207,7 @@ padding:15px 45px;
 font-size:18px;
 border-radius:40px;
 cursor:pointer;
-box-shadow:0 6px 12px rgba(0,0,0,0.2);
-}
-
-.footer{
-    background:#0c3b2e;
-    color:white;
-    padding:40px 0;
-}
-
-.footer-container{
-    width:90%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:30px;
-}
-
-.footer-box h2,
-.footer-box h3{
-    margin-bottom:15px;
-}
-
-.footer-box p{
-    font-size:14px;
-    line-height:1.6;
-}
-
-.footer-box ul{
-    list-style:none;
-    padding:0;
-}
-
-.footer-box ul li{
-    margin-bottom:8px;
-}
-
-.footer-box a{
-    color:white;
-    text-decoration:none;
-}
-
-.footer-box a:hover{
-    color:#f9a826;
-}
-
-.footer-bottom{
-    text-align:center;
-    margin-top:30px;
-    border-top:1px solid rgba(255,255,255,0.2);
-    padding-top:15px;
-    font-size:14px;
-}
-button, .box{
-
-transition:0.2s;
-cursor:pointer;
-
-}
-.faq-btn{
-margin-top:30px;
-background:linear-gradient(#ff6a00,#ff3b00);
-border:none;
-color:white;
-padding:15px 45px;
-font-size:18px;
-border-radius:40px;
-cursor:pointer;
-
 box-shadow:0 10px 20px rgba(255,100,0,0.6);
-
 transition:0.2s;
 }
 
@@ -334,21 +220,70 @@ box-shadow:0 15px 30px rgba(255,100,0,0.8);
 transform:translateY(4px);
 }
 
-/* hover করলে উপরে উঠবে */
-
-button:hover, .box:hover{
-
-transform:translateY(-4px);
-
+.footer{
+background:#0c3b2e;
+color:white;
+padding:40px 0;
+margin: -40px;
 }
 
-/* click করলে চাপা পড়বে */
+.footer-container{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
 
-button:active, .box:active{
+.footer-box h2,
+.footer-box h3{
+margin-bottom:15px;
+}
 
+.footer-box p{
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-box ul{
+list-style:none;
+padding:0;
+}
+
+.footer-box ul li{
+margin-bottom:8px;
+}
+
+.footer-box a{
+color:white;
+text-decoration:none;
+}
+
+.footer-box a:hover{
+color:#f9a826;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+border-top:1px solid rgba(255,255,255,0.2);
+padding-top:15px;
+font-size:14px;
+}
+
+button,.box{
+transition:0.2s;
+cursor:pointer;
+}
+
+button:hover,.box:hover{
+transform:translateY(-4px);
+}
+
+button:active,.box:active{
 transform:translateY(6px);
+}
 
-} 
 .loader{
 position:fixed;
 top:0;
@@ -365,87 +300,44 @@ font-weight:bold;
 display:none;
 z-index:9999;
 }
-/* Tablet */
 
-@media (max-width: 992px){
+@media (max-width:576px){
 
-.banner img{
-width:90%;
+.hero {
+  min-height: 100px;
+  background-image: url("ChatGPT Image Mar 10, 2026, 05_24_57 PM.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0; 
+  width: 100%;   
+  margin:0;  
 }
-
 .offer{
-font-size:32px;
+font-size:26px;
 }
 
 .features{
 flex-direction:column;
 align-items:center;
-gap:15px;
 }
 
 .box{
-width:80%;
+width:900%;
 text-align:center;
 }
 
 .join{
-padding:18px 60px;
-font-size:22px;
-}
-
-.footer-container{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-
-/* Mobile */
-
-@media (max-width: 600px){
-
-.hero{
-padding:20px;
-height:auto;
-}
-
-.logo img{
-width:70px;
-height:70px;
+width:900%;
+padding:18px 20px;
+font-size:20px;
 }
 
 .banner img{
-width:95%;
-}
-
-.offer{
-font-size:24px;
-line-height:1.4;
-}
-
-.features{
-flex-direction:column;
-gap:12px;
-}
-
-.box{
-width:90%;
-font-size:16px;
-padding:10px 20px;
-}
-
-.join{
-padding:16px 40px;
-font-size:20px;
-width:90%;
-}
-
-.gift-box{
-width:95%;
-}
-
-.faq-box{
-width:95%;
+width:100%;
 }
 
 .footer-container{

@@ -2,6 +2,7 @@
 <html lang="bn">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,11 +22,11 @@
 </div>
 
 <div class="pay-service">
-<span class="pay">PAY</span>
-SERVICE
+<span class="pay">PAY</span> SERVICE
 </div>
 
 </div>
+
 
 <div class="container">
 
@@ -41,14 +42,12 @@ SERVICE
 <p class="small">এই BKASH নাম্বারে শুধুমাত্র Send Money গ্রহণ করা হয়</p>
 
 <div class="wallet-box">
-
 <input id="walletNumber" type="text" value="01897889723" readonly>
-
 <button class="copy-btn" onclick="copyNumber()">📋</button>
-
 </div>
 
 </div>
+
 
 <div class="right">
 
@@ -62,17 +61,23 @@ BKASH Deposit
 
 </div>
 
+
 <div class="trx">
 
 <label>
-Send Money TrxID নাম্বারটি লিখুন <span>(প্রয়োজন)</span>
+Send Money TrxID নাম্বারটি লিখুন
+<span>(প্রয়োজন)</span>
 </label>
 
-<input id="trxid" type="text" maxlength="10" placeholder="TrxID অবশ্যই পূরণ করতে হবে!"></div>
+<input id="trxid" type="text" maxlength="10" placeholder="TrxID অবশ্যই পূরণ করতে হবে!">
+
+</div>
+
 
 <button class="confirm" onclick="sendWhatsApp()">
 নিশ্চিত
 </button>
+
 
 <div class="notice">
 
@@ -86,6 +91,7 @@ Send Money TrxID নাম্বারটি লিখুন <span>(প্রয়
 
 </div>
 
+
 <script>
 
 function copyNumber(){
@@ -93,7 +99,6 @@ function copyNumber(){
 const copyText = document.getElementById("walletNumber");
 
 copyText.select();
-
 copyText.setSelectionRange(0,99999);
 
 navigator.clipboard.writeText(copyText.value);
@@ -103,6 +108,8 @@ alert("Number Copied");
 }
 
 </script>
+
+
 <script>
 
 function sendWhatsApp(){
@@ -130,5 +137,7 @@ window.open(url, "_blank");
 }
 
 </script>
+
 </body>
+
 </html>
