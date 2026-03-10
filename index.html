@@ -34,17 +34,15 @@
 🎬 ফ্রি ডেমো দেখুন
 </div>
 
-<a href="payment.html" class="box">
+<div class="box" onclick="goPayment()">
 📥 কোর্সে জয়েন করুন
-</a>
+</div>
 
 </div>
 
-<a href="payment.html">
-<button class="join">
+<button class="join" onclick="goPayment()">
 ✓ এখনি ভর্তি হন - ৯৯ টাকায়
 </button>
-</a>
 
 </section>
 
@@ -141,9 +139,7 @@
 
 </div>
 
-<a href="payment.html">
-<button class="faq-btn">ভর্তি হতে ক্লিক করুন</button>
-</a>
+<button class="faq-btn" onclick="goPayment()">ভর্তি হতে ক্লিক করুন</button>
 
 </section>
 
@@ -189,6 +185,25 @@
     <p>© 2026 Sirat Organic Mart | All Rights Reserved</p>
   </div>
 </footer> 
+<div id="loader" class="loader">
+Loading...
+</div>
+
+<script>
+
+function goPayment(){
+
+document.getElementById("loader").style.display = "flex";
+
+setTimeout(function(){
+
+window.location.href = "payment.html";
+
+},1500);
+
+}
+
+</script>
 
 </body>
 <script>
