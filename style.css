@@ -7,6 +7,7 @@
 body {
     margin: 0;
     padding: 0;
+background:none;
 }
 
 html,body{
@@ -29,10 +30,13 @@ flex-direction:column;
 align-items:center;
 text-align:center;
 padding:0px;
-margin-bottom: 25px;
+max-width:100%;
+width:100vw;
+margin:0;
+/* margin-bottom: 25px;
 margin-top: -40px;
 margin-right: -40px;
-margin-left: -40px;
+margin-left: -40px; */
 }
 
 .logo img{
@@ -44,8 +48,9 @@ margin-bottom:15px;
 
 .banner img{
 width:100%;
-max-width:720px;
+/* max-width:720px; */
 margin-bottom:20px;
+max-width:100%;
 }
 
 .offer{
@@ -115,7 +120,7 @@ box-shadow:0 4px 0 #7a0000;
 background:#e5d0ad;
 padding:60px 20px;
 text-align:center;
-margin: -20px;
+/* margin: -20px; */
 
 }
 
@@ -153,7 +158,7 @@ border-bottom:none;
 background:#f4f4f4;
 padding:70px 20px;
 text-align:center;
-margin: -40px;
+/* margin: -40px; */
 }
 
 .faq h2{
@@ -228,7 +233,7 @@ transform:translateY(4px);
 background:#0c3b2e;
 color:white;
 padding:40px 0;
-margin: -40px;
+/* margin: -40px; */
 }
 
 .footer-container{
